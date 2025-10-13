@@ -1,2 +1,3 @@
-Projeto Sorteador de números
-Uma lista de tarefas
+Desafio prático - Sorteador de números
+
+
