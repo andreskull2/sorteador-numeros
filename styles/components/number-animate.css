@@ -1,0 +1,36 @@
+.wrapper-animate > span {
+    font: var(--bold) 4rem/1.5 var(--ff-r-mono);
+    color: var(--content-inverse);
+    position: absolute;
+}
+
+.wrapper-animate {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 1.75rem;
+
+    background: var(--content-brand);
+
+    animation: elementAnimate 1500ms ease-in-out infinite;
+}
+
+@keyframes elementAnimate {
+    0% {
+        opacity: 0;
+        transform: scale(-0);
+    }
+
+    10% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
