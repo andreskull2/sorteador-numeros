@@ -23,7 +23,7 @@
     --accent-lime: #D1DC97;
     --accent-red: #E9A9B3;
 
-    --gradient-border: linear-gradient(#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+    --gradient-border: linear-gradient(45deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
     --gradient-background: linear-gradient(#D586E0 0%, #91A1FA 98.93%);
     --gradient-content: linear-gradient(#C7C9CC 0%, #3D3D3D 100%);
 
@@ -36,7 +36,7 @@
     --fs-lg: 2rem;
     --fs-md: 1.25rem;
     --fs-base: 1rem;
-    --fs-sm: 875rem;
+    --fs-sm: .875rem;
     --fs-xm: .75rem;
 
     --extra-bold: 800;
