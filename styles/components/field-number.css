@@ -14,6 +14,11 @@
 }
 
 .input-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .1rem;
+
     background-color: var(--background-secondary);
     color: var(--content-primary);
     font: var(--display-small);
@@ -26,6 +31,19 @@
     border-radius: .5rem;
 
     transition: all 200ms ease-in-out;
+
+    & > input {
+        appearance: none;
+        all: unset;
+        resize: none;
+        field-sizing: content;
+        caret-color: transparent;
+    }
+
+    & > img {
+        display: none;
+        height: 2rem;
+    }
 }
 
 /* HOVER STYLES */
@@ -77,3 +95,13 @@
     }
 }
 
+/* Animação input em foco */
+@keyframes FieldAnimation {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    51% {
+        opacity: 0;
+    }
+}
