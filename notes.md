@@ -40,8 +40,8 @@ Funcionalidades principais
 
 Validações
 * Não permitir campos vazios;
-* O valor másximo deve ser maior que o valor mínimo;
-* A quantidade de números nnao pode ser maior que o intervalo disponível (quando a opção de não repetir estiver marcada);
+* O valor máximo deve ser maior que o valor mínimo;
+* A quantidade de números não pode ser maior que o intervalo disponível (quando a opção de não repetir estiver marcada);
 * Mensagens de erro amigáveis devem ser exibidas se as condições nnao forem atendidas.
 
 Exibição dos resultados
@@ -68,7 +68,7 @@ Lembre-se que o intuito de um desafio é te impulsionar, por isso, dependendo do
 
 E lembre-se: tenha calma! Enfrentar desafios faz parte do seu processo de aprendizado!
 
-Se precisar de alguma orientaçnao ou suporte, estamos aqui com você! Bons estudos e boa prática
+Se precisar de alguma orientação ou suporte, estamos aqui com você! Bons estudos e boa prática
 
 ## Tarefas
 Use este checklist para ajudar a organizar a sua entrega
