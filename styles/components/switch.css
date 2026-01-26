@@ -1,0 +1,39 @@
+#repeat {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch {
+    display: block;
+    background: var(--content-tertiary);
+    width: 1.875rem;
+    height: 1.25rem;
+    border-radius: 1rem;
+
+    position: relative;
+
+    & .slider {
+        display: block;
+        background: var(--content-primary);
+        width: .875rem;
+        height: .875rem;
+        border-radius: 100%;
+        position: absolute;
+
+        left: .2rem;
+        bottom: .2rem;
+
+        transition: all 200ms ease-in-out;
+    }
+
+    transition: all 200ms ease-in-out;
+}
+
+.switch:has(:checked) {
+    background: var(--gradient-background);
+
+    & .slider {
+        transform: translateX(.6rem);
+    }
+}
