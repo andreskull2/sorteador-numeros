@@ -19,11 +19,13 @@
 
     & > .results-wrapper {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 1rem;
 
         min-height: 6.25rem;
+        max-width: 30.125rem;
     }
 }
 
