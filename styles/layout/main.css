@@ -11,3 +11,35 @@ main {
     }
 }
 
+.numbers-field {
+    display: flex;
+    justify-content: start;
+    gap: .75rem;
+    margin-bottom: 1.25rem;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    & > label {
+        font: var(--label-small);
+        color: var(--content-primary);
+    }
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    margin-top: 2.375rem;
+
+    & > .infor-wrapper {
+        display: flex;
+        align-items: start;
+        gap: .5rem;
+    }
+}
+
+
