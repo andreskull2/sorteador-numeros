@@ -10,13 +10,112 @@
   <title>Numbers - Sorteador de Números</title>
 </head>
 <body>
-    <div style="display: flex; gap: 5rem;">
-      <div class="result-random">
-        <div class="wrapper-animate">
+    <div id="page">
+      <header class="container">
+        <div>
+          <img src="assets/icons/logo.svg" alt="Numbers">
+          <span>Numbers</span>
         </div>
-        <span>23</span>
-      </div>
-      
+      </header>
+
+      <main class="container">
+        <section class="info-app">
+          <header>
+            <span>Online - gratuito</span>
+            <h1>Sorteador <br> de números</h1>
+          </header>
+
+          <div class="infos">
+            <div class="infor-wrapper">
+              <img src="assets/icons/person.svg" alt="person">
+            </div>
+            
+            <div>
+              <h3>Como funciona o sorteador de números?</h3>
+              <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro de um 
+                intervalo especificado pelo usuário.
+              </p>
+            </div>
+          </div>
+
+          <div class="infor-wrapper">
+            <img src="assets/icons/person.svg" alt="person">
+
+            <div>
+              <h3>Posso escolher o intervalo dos números?</h3>
+              <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <form>
+          <header>
+            <h2>Quero sortear:</h2>
+            <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os
+              resultados na tela. É rápido e fácil!
+            </p>
+          </header>
+
+          <div class="options-wrapper">
+            <div class="numbers-field">
+              <div class="number-wrapper">
+                <label for="input-number">números</label>
+                <div class="gradient-border">
+                  <label for="input-number">
+                    <div class="input-number">
+                      <input id="input-number" type="text" required value="2" minlength="1" maxlength="3"/>
+                      <img src="assets/icons/animation-field.svg" alt="|">
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="number-wrapper">
+                <label for="input-where">de</label>
+                <div class="gradient-border">
+                  <label for="input-where">
+                    <div class="input-number">
+                      <input id="input-where" type="text" required value="1" minlength="1" maxlength="3" />
+                      <img src="assets/icons/animation-field.svg" alt="|">
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="number-wrapper">
+                <label for="input-at">até</label>
+                <div class="gradient-border">
+                  <label for="input-at">
+                    <div class="input-number">
+                      <input id="input-at" type="text" required value="100" minlength="1" maxlength="3">
+                      <img src="assets/icons/animation-field.svg" alt="|">
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkbox-wrapper">
+              <label for="repeat" class="switch">
+                <input type="checkbox" name="repeat" id="repeat">
+                <span class="slider"></span>
+              </label>
+
+              <label for="repeat">Não repetir números</label>
+            </div>
+          </div>
+
+          <div class="btn-submit">
+            <div class="button-border">
+              <button id="start" class="btn-primary" type="button">
+                <span>Sortear</span>
+                <img src="assets/icons/arrow-right.svg" alt="arrow-right">
+              </button>
+            </div>
+          </div>
+        </form>
+      </main>
     </div>
 </body>
 </html>
