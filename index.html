@@ -64,7 +64,7 @@
                 <div class="gradient-border">
                   <label for="input-number">
                     <div class="input-number">
-                      <input id="input-number" type="text" required value="2" maxlength="3"/>
+                      <input id="input-number" name="input-number" type="text" required value="2" maxlength="3"/>
                       <img src="assets/icons/animation-field.svg" alt="|">
                     </div>
                   </label>
@@ -76,7 +76,7 @@
                 <div class="gradient-border">
                   <label for="input-where">
                     <div class="input-number">
-                      <input id="input-where" type="text" required value="1" minlength="1" maxlength="3" />
+                      <input id="input-where" name="input-where" type="text" required value="1" minlength="1" maxlength="3" />
                       <img src="assets/icons/animation-field.svg" alt="|">
                     </div>
                   </label>
@@ -88,7 +88,7 @@
                 <div class="gradient-border">
                   <label for="input-at">
                     <div class="input-number">
-                      <input id="input-at" type="text" required value="100" minlength="1" maxlength="3">
+                      <input id="input-at" name="input-at" type="text" required value="100" minlength="1" maxlength="3">
                       <img src="assets/icons/animation-field.svg" alt="|">
                     </div>
                   </label>
@@ -98,7 +98,7 @@
 
             <div class="checkbox-wrapper">
               <label for="repeat" class="switch">
-                <input type="checkbox" name="repeat" id="repeat">
+                <input type="checkbox" name="repeat" id="repeat" checked>
                 <span class="slider"></span>
               </label>
 
@@ -107,8 +107,8 @@
           </div>
 
           <div class="btn-submit">
-            <div class="button-border">
-              <button id="start" class="btn-primary" type="button">
+            <div class="button-border show">
+              <button id="start" class="btn-primary" type="submit">
                 <span>Sortear</span>
                 <img src="assets/icons/arrow-right.svg" alt="arrow-right">
               </button>
@@ -116,7 +116,7 @@
           </div>
         </form>
 
-        <section class="result-number hidden">
+        <section id="results" class="result-number hidden">
           <header>
             <h2>Resultado do sorteio</h2>
             <p>1º resultado</p>
