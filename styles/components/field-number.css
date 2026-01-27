@@ -1,108 +1,98 @@
+/* field-number.css - MANTENDO SUA ESTRUTURA CONSOLIDADA */
 
-/* DEFAULT STYLES */
 .number-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: .5rem;
-
-    & > label {
-        color: var(--content-secondary);
-        font: var(--label-medium);
-        transition: all 100ms ease-in-out;
-        text-transform: uppercase;
-    }
 }
 
+.number-wrapper > label {
+    color: var(--content-secondary);
+    font: var(--label-medium);
+    transition: all 100ms ease-in-out;
+    text-transform: uppercase;
+}
+
+/* A MOLDURA DO INPUT */
+.gradient-border {
+    position: relative;
+    padding: 1.5px; 
+    border-radius: .5rem;
+    transition: all 200ms ease-in-out;
+}
+
+/* O CAMPO ONDE O NÚMERO APARECE */
 .input-number {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .1rem;
 
     background-color: var(--background-secondary);
     color: var(--content-primary);
-    font: var(--display-small);
-    text-align: center;
+    
     width: 5.375rem;
     height: 3.5rem;
-    padding: .25rem .5rem;
-    margin: 1px;
-    border: none;
     border-radius: .5rem;
-
+    border: none;
+    
     transition: all 200ms ease-in-out;
+    overflow: hidden;
+}
 
-    & > input {
-        appearance: none;
-        all: unset;
-        resize: none;
-        field-sizing: content;
-        caret-color: transparent;
-    }
+/* O INPUT REAL - AJUSTADO PARA O CURSOR APARECER */
+.input-number > input {
+    appearance: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    
+    /* Usando var para garantir que a fonte apareça */
+    font: var(--display-small); 
+    color: var(--content-primary);
 
-    & > img {
-        display: none;
-        height: 2rem;
+    /* O CURSOR VOLTA AQUI */
+    caret-color: var(--content-brand);
+    cursor: text;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 }
 
-/* HOVER STYLES */
-.number-wrapper:hover {
-    & > label {
-        color: var(--background-brand);
-    }
-
-    & > .gradient-border {
-        position: relative;
-
-        & .input-number {
-            background: var(--background-tertiary);
-        }
-
-        &::before {
-            content: "";
-            background: var(--gradient-border);
-            position: absolute;
-            inset: 0;
-            border-radius: .5rem;
-            z-index: -1;
-        }
-    }
+/* HOVER */
+.number-wrapper:hover > label {
+    color: var(--background-brand);
 }
 
-/* FOCUS STYLES */
-.number-wrapper:focus-within {
-    & > label {
-        color: var(--background-brand);
-    }
-
-    & > .gradient-border {
-        position: relative;
-
-        & .input-number {
-            background: var(--background-tertiary);
-            outline: none;
-        }
-
-        &::before {
-            content: "";
-            background: var(--gradient-border);
-            position: absolute;
-            inset: 0;
-            border-radius: .5rem;
-            z-index: -1;
-        }
-    }
+.number-wrapper:hover .input-number {
+    background-color: var(--background-tertiary);
 }
 
-/* Animação input em foco */
-@keyframes FieldAnimation {
-    0%, 100% {
-        opacity: 1;
-    }
+/* FOCUS - ONDE O GRADIENTE APARECE */
+.number-wrapper:focus-within > label {
+    color: var(--background-brand);
+}
 
-    51% {
-        opacity: 0;
-    }
+.number-wrapper:focus-within .gradient-border::before {
+    content: "";
+    background: var(--gradient-border);
+    position: absolute;
+    inset: 0;
+    border-radius: .5rem;
+    z-index: -1;
+}
+
+.number-wrapper:focus-within .input-number {
+    background-color: var(--background-tertiary);
+}
+
+.input-number > img {
+    display: none !important;
 }
