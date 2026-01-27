@@ -8,6 +8,7 @@ const rangerAt = document.getElementById("input-at");
 const dontReapeat = document.getElementById("repeat");
 const again = document.getElementById("again");
 const btnAgain = document.querySelector(".btn-again .button-border");
+const againWrapper = document.querySelector(".btn-again");
 
 // Resultado
 const resultsBlock = document.getElementById("results");
@@ -76,9 +77,8 @@ const animateResults = () => {
 
         // AO chegar ao final da lista, define atraso para botão "again" aparecer
         if(index === resultsItems.length - 1) {
-            setTimeout (() => {
-                btnAgain.classList.add("show");
-            }, baseDelay + 4000);
+            againWrapper.style.display = "block";
+            againWrapper.style.animationDelay = `${baseDelay + 4000}ms`
         }
     })
 }
