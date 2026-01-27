@@ -1,6 +1,6 @@
 main {
     & > form {
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 2.5rem;
         max-width: 30.125rem;
@@ -42,4 +42,31 @@ main {
     }
 }
 
+.mobile-only {
+    display: none;
+    flex-direction: column;
+    gap: 2.25rem;
+    margin-top: 5rem;
 
+    & > .infor-wrapper {
+        display: flex;
+        align-items: start;
+        gap: .5rem;
+    }
+}
+
+@media (width <= 80em) {
+    & main {
+        & > form {
+            margin-top: 2.625rem;
+        }
+    }
+
+    .infos {
+        display: none;
+    }
+
+    .mobile-only {
+        display: flex;
+    }
+}
