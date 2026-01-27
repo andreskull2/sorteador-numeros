@@ -1,87 +1,61 @@
+/* 1. O CONTAINER DO BOTÃO (A moldura do efeito) */
 .button-border {
     display: flex;
     position: relative;
     padding: 2px;
+    border-radius: .5rem;
+    width: 100%;
+    background: transparent;
     transition: all 300ms ease-in-out;
-
-    & .btn-primary {
-        appearance: none;
-        all: unset;
-        cursor: pointer;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: .5rem;
-
-        width: 100%;
-        padding: 1rem;
-
-        font: var(--label-medium);
-        color: var(--content-primary);
-        background: var(--background-tertiary);
-        text-transform: uppercase;
-
-        border-radius: .5rem;
-
-        transition: all 250ms ease-in-out;
-    }
-
-    &:hover::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: .5rem;
-        background-position: 100% 50%;
-        z-index: -1;
-
-        background: var(--gradient-border);
-        background-size: 400%;
-        background-position: 0 50%;
-
-        animation: bg-gradient 4s ease infinite;
-    }
-
-    &:hover {
-        & .btn-primary {
-            background: var(--background-secondary);
-
-            & > img[alt="arrow-right"] {
-                transform: translateX(-1px);
-                animation: arrowAnimation 2500ms ease-in-out infinite;
-            }
-        }
-    }
+    isolation: isolate; /* ISSO impede que o z-index do botão brigue com o fundo da página */
 }
 
-.btn-again {
-    display: none;
-    opacity: 0;
-    animation: showBtn 700ms ease-in-out forwards;
+/* 2. O BOTÃO REAL */
+.btn-primary {
+    appearance: none;
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: 100%;
+    padding: 1rem;
+    font: var(--label-medium);
+    color: var(--content-primary);
+    background: var(--background-tertiary);
+    border-radius: .5rem;
+    transition: all 250ms ease-in-out;
 }
 
-@keyframes showBtn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+/* 3. O EFEITO DE BRILHO NO HOVER */
+.button-border:hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: .5rem;
+    z-index: -1;
+    background: var(--gradient-border);
+    background-size: 400%;
+    animation: bg-gradient 4s ease infinite;
 }
 
+.button-border:hover .btn-primary {
+    background: var(--background-secondary);
+}
+
+.button-border:hover img[alt="arrow-right"] {
+    animation: arrowAnimation 1s ease-in-out infinite;
+}
+
+/* 4. AS ANIMAÇÕES */
 @keyframes bg-gradient {
-    50% {
-        background-position: 100% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 @keyframes arrowAnimation {
-    0%, 100% {
-        transform: translateX(0px);
-    }
-
-    50% {
-        transform: translateX(10px);
-    }
+    0%, 100% { transform: translateX(0px); }
+    50% { transform: translateX(6px); }
 }
