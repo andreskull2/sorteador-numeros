@@ -2,3 +2,21 @@
     max-width: 80em;
     margin-inline: auto;
 }
+
+.show {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.desktop-only {
+    display: none;
+}
+
+@media (width >= 80em) {
+    .desktop-only {
+        display: initial;
+    }
+}
