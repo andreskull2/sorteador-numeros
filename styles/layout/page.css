@@ -1,27 +1,35 @@
 #page {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    padding: 4.75rem 8.375rem;
+    align-items: center;
+
+    /* Faz a página ocupar a tela toda e centralizar o conteúdo */
+    min-height: 100vh;
+
+    /* Padding menor para não esmagar os elementos */
+    padding: 2rem;
+
+    /* Garante que o fundo do body apareça através desta div */
+    background: transparent;
 
     & > header {
         width: 100%;
-        display: flex;
-        justify-content: start;
+        max-width: 75rem; /* Limite de largura do Figma */
+        margin-bottom: 2rem; /* Espaço após o logo */
 
-        & > div {
-            margin-bottom: 4.75rem;
-            display: flex;
-            align-items: center;
-            gap: .6875rem;
-        }
+        display: flex;
+        justify-content: flex-start;
     }
 
     & > main {
+        flex: 1; /* Ocupa o espaço central */
+        width: 100%;
+        max-width: 75rem; /* Mantém alinhado com o header */
+
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 6.75rem;
+        align-items: center; /* Centraliza verticalmente o sorteador */
+        justify-content: space-between; /* Texto na esquerda, Form na direita */
+        gap: 2rem;
     }
 }
 
