@@ -55,15 +55,95 @@
     --paragraph-medium: var(--medium) var(--fs-sm)/1.5 var(--ff-r-flex);
     --paragraph-small: var(--medium) var(--fs-xm)/1.5 var(--ff-r-flex);
 
+    --label-large: var(--bold) 1.25rem/1.5 var(--ff-r-flex);
     --label-medium: var(--bold) var(--fs-md)/1.5 var(--ff-r-flex);
     --label-small: var(--bold) var(--fs-base)/1.5 var(--ff-r-flex);
 }
 
 body {
-    background: #191919;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
+    position: relative;
+    background: var(--background-primary) url(/assets/background.png) center/cover;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 50%;
+        inset: 0;
+        z-index: -1;
+
+        background: linear-gradient(
+            180deg,
+            var(--background-primary) 0%,
+            transparent 200%
+        );
+    }
+}
+
+h1, h2, h3, span {
+    color: var(--content-primary);
+} 
+
+h1 {
+    font: var(--display-large);
+    text-transform: uppercase;
+    margin-top: .75rem;
+}
+
+#page > header > div {
+    & > img {
+        width: 2.375rem;
+        height: 2.375rem;
+        object-fit: cover;
+    }
+
+    & > span {
+        font: var(--extra-bold) 1.5rem/1.5 var(--ff-sora);
+        text-transform: uppercase;
+    }
+}
+
+.info-app {
+    & > header {
+        & > span {
+            background: var(--gradient-content);
+            text-decoration: none;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+
+            text-transform: uppercase;
+            font: var(--overline);
+        }
+    }
+}
+
+.infor-wrapper > div {
+    & > img {
+        width: 1.25rem;
+        height: 1.25rem;
+        object-fit: cover;
+    }
+
+    & > h3 {
+        font: var(--paragraph-medium);
+        color: var(--content-brand);
+    }
+
+    & > p {
+        font: var(--paragraph-small);
+        color: var(--content-secondary);
+    }
+}
+
+form {
+    & > header {
+        & > h2 {
+            font: var(--label-large);
+        }
+
+        & > p {
+            font: var(--paragraph-large);
+            color: var(--content-secondary);
+        }
+    }
 }
