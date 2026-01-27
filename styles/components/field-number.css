@@ -10,6 +10,7 @@
         color: var(--content-secondary);
         font: var(--label-medium);
         transition: all 100ms ease-in-out;
+        text-transform: uppercase;
     }
 }
 
