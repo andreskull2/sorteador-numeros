@@ -6,13 +6,14 @@
 
     & > header {
         width: 100%;
+        display: flex;
+        justify-content: start;
 
         & > div {
             margin-bottom: 4.75rem;
             display: flex;
             align-items: center;
             gap: .6875rem;
-            align-self: start;
         }
     }
 
@@ -24,3 +25,22 @@
     }
 }
 
+@media (width <= 80em) {
+    #page {
+        padding: 2.25rem 2.75rem;
+        
+        & > header {
+            justify-content: center;
+
+            & > div {
+                margin-bottom: 2.875rem;
+            }
+        }
+
+        & > main {
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+    }
+}
