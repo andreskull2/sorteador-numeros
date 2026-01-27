@@ -1,5 +1,5 @@
 .button-border {
-    display: none;
+    display: flex;
     position: relative;
     padding: 2px;
     transition: all 300ms ease-in-out;
@@ -51,6 +51,22 @@
                 animation: arrowAnimation 2500ms ease-in-out infinite;
             }
         }
+    }
+}
+
+.btn-again {
+    display: none;
+    opacity: 0;
+    animation: showBtn 700ms ease-in-out forwards;
+}
+
+@keyframes showBtn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
