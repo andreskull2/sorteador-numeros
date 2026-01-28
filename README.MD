@@ -51,7 +51,7 @@ Being a **Designer transitioning to Front-end**, this project was a significant 
 ## 🔗 Live Project
 
 ➡️ [Access the live version](SUA_URL_AQUI)
-🎓 [Rocketseat JavaScript Course](https://www.rocketseat.com.br/formacao/javascript)
+🎓 [Rocketseat JavaScript Course](https://www.rocketseat.com.br/)
 ---
 
 ## 📝 License
