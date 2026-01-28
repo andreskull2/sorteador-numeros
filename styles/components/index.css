@@ -1,4 +1,4 @@
-@import url(/styles/components/field-number.css);
-@import url(/styles/components/switch.css);
-@import url(/styles/components/button.css);
-@import url(/styles/components/number-animate.css);
+@import url(./field-number.css);
+@import url(./switch.css);
+@import url(./button.css);
+@import url(./number-animate.css);
